@@ -3,7 +3,7 @@ resource "aws_vpc" "ccVPC" {
   instance_tenancy = "default"
   tags = {
     Name    = "ccVPC"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 
@@ -11,14 +11,14 @@ resource "aws_internet_gateway" "ccIGW" {
   vpc_id = aws_vpc.ccVPC.id
   tags = {
     Name    = "ccIGW"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 
 resource "aws_eip" "ccNatGatewayEIP1" {
   tags = {
     Name    = "ccNatGatewayEIP1"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_nat_gateway" "ccNatGateway1" {
@@ -26,7 +26,7 @@ resource "aws_nat_gateway" "ccNatGateway1" {
   subnet_id     = aws_subnet.ccPublicSubnet1.id
   tags = {
     Name    = "ccNatGateway1"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_subnet" "ccPublicSubnet1" {
@@ -35,14 +35,14 @@ resource "aws_subnet" "ccPublicSubnet1" {
   availability_zone = var.availability_zones[0]
   tags = {
     Name    = "ccPublicSubnet1"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 
 resource "aws_eip" "ccNatGatewayEIP2" {
   tags = {
     Name    = "ccNatGatewayEIP2"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_nat_gateway" "ccNatGateway2" {
@@ -50,7 +50,7 @@ resource "aws_nat_gateway" "ccNatGateway2" {
   subnet_id     = aws_subnet.ccPublicSubnet1.id
   tags = {
     Name    = "ccNatGateway2"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_subnet" "ccPublicSubnet2" {
@@ -59,7 +59,7 @@ resource "aws_subnet" "ccPublicSubnet2" {
   availability_zone = var.availability_zones[1]
   tags = {
     Name    = "ccPublicSubnet2"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 
@@ -69,7 +69,7 @@ resource "aws_subnet" "ccPrivateSubnet1" {
   availability_zone = var.availability_zones[0]
   tags = {
     Name    = "ccPrivateSubnet1"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_subnet" "ccPrivateSubnet2" {
@@ -78,7 +78,7 @@ resource "aws_subnet" "ccPrivateSubnet2" {
   availability_zone = var.availability_zones[1]
   tags = {
     Name    = "ccPrivateSubnet2"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 
@@ -90,7 +90,7 @@ resource "aws_route_table" "ccPublicRT" {
   }
   tags = {
     Name    = "ccPublicRT"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_route_table" "ccPrivateRT1" {
@@ -101,7 +101,7 @@ resource "aws_route_table" "ccPrivateRT1" {
   }
   tags = {
     Name    = "ccPrivateRT1"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 resource "aws_route_table" "ccPrivateRT2" {
@@ -112,7 +112,7 @@ resource "aws_route_table" "ccPrivateRT2" {
   }
   tags = {
     Name    = "ccPrivateRT2"
-    Project = "CC TF Demo"
+    Project = "TF Demo Sergio"
   }
 }
 
