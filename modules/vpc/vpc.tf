@@ -2,7 +2,7 @@ resource "aws_vpc" "ccVPC" {
   cidr_block       = var.vpc_cidr
   instance_tenancy = "default"
   tags = {
-    Name    = "ccVPC"
+    Name    = "Sergio_Test_VPC"
     Project = "TF Demo Sergio 2"
   }
 }
