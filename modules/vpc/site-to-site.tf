@@ -5,9 +5,9 @@ provider "aws" {
 }
 
 #find the latest AWS Linux AMI
-data "aws_ssm_parameter" "linux" {
-  name = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
-}
+#data "aws_ssm_parameter" "linux" {
+#  name = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+#}
 
 #we will use the default vpc (172.31.0.0/16)
 data "aws_vpc" "default" {
@@ -42,7 +42,7 @@ resource "aws_security_group" "allowIn" {
 
 #Linux creation in the default VPC and subnet defined earlier, tied to security group created earlier, and outputting the private IP address of the EC2 after creation
 resource "aws_instance" "awslinux01" {
-    ami = "${data.aws_ssm_parameter.linux.value}"
+    ami = "ami-0eb11ab33f229b26c"
     instance_type = "t2.micro"
     tags = {
         Name = "awslinux"
