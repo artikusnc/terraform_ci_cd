@@ -92,7 +92,7 @@ resource "aws_vpn_connection" "vpn" {
   customer_gateway_id = aws_customer_gateway.cgw.id
   type                = "ipsec.1"
   static_routes_only  = true
-  tunnel1_preshared_key = "VWXacKvfA^dHvWtLy6$tu8#PSyR*qM"
+  tunnel1_preshared_key = "ewdsd13232refsdfsdsg344"
 }
 
 #create static route to the on-premise network on the AWS VPN side
