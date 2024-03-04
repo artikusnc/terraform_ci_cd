@@ -10,9 +10,9 @@ provider "aws" {
 #}
 
 #we will use the default vpc (172.31.0.0/16)
-data "aws_vpc" "default" {
-    default = true
-}
+#data "aws_vpc" "default" {
+#    default = true
+#}
 
 #defining a subnet in the default vpc to place my Linux EC2
 data "aws_subnet" "default" {
