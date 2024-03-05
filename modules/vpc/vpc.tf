@@ -3,7 +3,7 @@ resource "aws_vpc" "ccVPC" {
   instance_tenancy = "default"
   tags = {
     Name    = "Sergio_Test_VPC"
-    Project = "TF Demo Sergio 200"
+    Project = "TF Demo Sergio 2000"
   }
 }
 
